@@ -10,18 +10,26 @@ Supports
 Turkish, Greek, Russian, Ukranian, Czech, Polish, Latvanian and Latin special chars.
 
 
+Require
+--------------------------------
+```javascript
+var parameterize = require('parameterize');
+```
+
+
+Using
+--------------------------------
+```javascript
+parameterize('parameterized url with special characters, öçıŞÇ');
+// parameterized-url-with-special-characters-ocisc
+```
+
 
 Using in express.js 3 view files as view helper
 --------------------------------
 
 paste in app.configure in app.js before app.use(app.router)
 
-
-Require
---------------------------------
-```javascript
-var parameterize = require('parameterize');
-```
 
 
 app.configure

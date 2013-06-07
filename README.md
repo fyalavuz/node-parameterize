@@ -44,9 +44,9 @@ index.jade
 
 using with ejs template engine
 ---
-index.exjs
+index.ejs
 
-```html
+```ejs
 <% parameterize('parameterized url with special characters, öçıŞÇ') %>
 // parameterized-url-with-special-characters-ocisc
 ```

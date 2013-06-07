@@ -1,0 +1,30 @@
+{
+  "author": {
+    "name": "Fırat Yalavuz",
+    "email": "yalavuz@gmail.com",
+    "url": "http://firat.me"
+  },
+  "name": "Parameterize.js",
+  "description": "node.js port of django admin urlify.js",
+  "tags": [
+    "urlify",
+    "Parameterize",
+    "url",
+    "parameter",
+    "permalink",
+    "seo"
+  ],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fyalavuz/node-parameterize.git"
+  },
+  "main": "parameterize.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "readmeFilename": "README.md",
+}

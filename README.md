@@ -10,8 +10,12 @@ Using in express.js 3 view files as view helper
 paste in app.configure in app.js before app.use(app.router)
 
 
+Supports
+--------------------------------
+Turkish, Greek, Russian, Ukranian, Czech, Polish, Latvanian and Latin special chars.
 
-require
+
+Require
 --------------------------------
 ```javascript
 var parameterize = require('parameterize');

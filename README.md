@@ -4,15 +4,17 @@ node-parameterize
 parameterize.js is a port of django admin [urlify.js](https://github.com/django/django/blob/master/django/contrib/admin/static/admin/js/urlify.js)
 
 
-Using in express.js 3 view files as view helper
---------------------------------
-
-paste in app.configure in app.js before app.use(app.router)
-
 
 Supports
 --------------------------------
 Turkish, Greek, Russian, Ukranian, Czech, Polish, Latvanian and Latin special chars.
+
+
+
+Using in express.js 3 view files as view helper
+--------------------------------
+
+paste in app.configure in app.js before app.use(app.router)
 
 
 Require

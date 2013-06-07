@@ -4,7 +4,7 @@
     "email": "yalavuz@gmail.com",
     "url": "http://firat.me"
   },
-  "name": "Parameterize.js",
+  "name": "parameterize",
   "description": "node.js port of django admin urlify.js",
   "tags": [
     "urlify",
@@ -26,5 +26,5 @@
   "dependencies": {},
   "devDependencies": {},
   "optionalDependencies": {},
-  "readmeFilename": "README.md",
+  "readmeFilename": "README.md"
 }

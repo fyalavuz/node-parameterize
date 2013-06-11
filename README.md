@@ -3,6 +3,9 @@ node-parameterize
 
 parameterize.js is a port of django admin [urlify.js](https://github.com/django/django/blob/master/django/contrib/admin/static/admin/js/urlify.js)
 
+Installing
+--------------------------------
+npm install parameterize
 
 
 Supports

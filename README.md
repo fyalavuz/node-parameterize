@@ -33,13 +33,10 @@ parameterize('parameterized url with special characters, öçıŞÇ');
 Using in express.js 3 view files as view helper
 --------------------------------
 
-paste in app.configure in app.js before app.use(app.router)
-
-
+You can implement it as in the example just below in your app.js file so that you can use it in all views. Note that it should be before the line 'app.use(app.router)'.
 
 app.configure
 --------------------------------
-
 
 ```javascript
   app.use(function(req, res, next) {

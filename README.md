@@ -1,5 +1,6 @@
 node-parameterize
 =================
+This repository adds node.js and npm support for [parameterize](http://apidock.com/rails/String/parameterize) which is originally used in Ruby on Rails. It replaces special characters in a string so that it may be used as part of a 'pretty' URL.
 
 parameterize.js is a port of django admin [urlify.js](https://github.com/django/django/blob/master/django/contrib/admin/static/admin/js/urlify.js)
 
@@ -24,6 +25,7 @@ Using
 --------------------------------
 ```javascript
 parameterize('parameterized url with special characters, öçıŞÇ');
+// outputs
 // parameterized-url-with-special-characters-ocisc
 ```
 
@@ -55,6 +57,7 @@ index.jade
 
 ```html
 #{parameterize('parameterized url with special characters, öçıŞÇ')}
+// output:
 // parameterized-url-with-special-characters-ocisc
 ```
 

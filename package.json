@@ -5,6 +5,7 @@
     "url": "http://firat.me"
   },
   "name": "parameterize",
+  "license": "MIT",
   "description": "This repository adds node.js and npm support for parameterize which is originally used in Ruby on Rails. It replaces special characters in a string so that it may be used as part of a 'pretty' URL.",
   "tags": [
     "urlify",

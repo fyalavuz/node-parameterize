@@ -91,8 +91,7 @@ Downcoder.Initialize = function()
     Downcoder.regex = new RegExp('[' + Downcoder.chars + ']|[^' + Downcoder.chars + ']+','g') ;
 }
 
-downcode= function( slug )
-{
+var downcode = function(slug){
     Downcoder.Initialize() ;
     var downcoded =""
     var pieces = slug.match(Downcoder.regex);
@@ -134,6 +133,7 @@ parameterize = function(s, num_chars, delimiter) {
     return s.substring(0, num_chars);// trim to first num_chars chars
 }
 
+
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = parameterize;
 } else if (typeof define === 'function' && define.amd) {
@@ -141,3 +141,4 @@ if (typeof module !== 'undefined' && module.exports) {
         return parameterize;
     });
 }
+

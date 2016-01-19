@@ -48,19 +48,19 @@ var CZECH_MAP = {
     'ž':'z', 'Č':'C', 'Ď':'D', 'Ě':'E', 'Ň': 'N', 'Ř':'R', 'Š':'S', 'Ť':'T',
     'Ů':'U', 'Ž':'Z'
 }
- 
+
 var POLISH_MAP = {
     'ą':'a', 'ć':'c', 'ę':'e', 'ł':'l', 'ń':'n', 'ó':'o', 'ś':'s', 'ź':'z',
     'ż':'z', 'Ą':'A', 'Ć':'C', 'Ę':'e', 'Ł':'L', 'Ń':'N', 'Ó':'o', 'Ś':'S',
     'Ź':'Z', 'Ż':'Z'
 }
- 
+
 var LATVIAN_MAP = {
     'ā':'a', 'č':'c', 'ē':'e', 'ģ':'g', 'ī':'i', 'ķ':'k', 'ļ':'l', 'ņ':'n',
     'š':'s', 'ū':'u', 'ž':'z', 'Ā':'A', 'Č':'C', 'Ē':'E', 'Ģ':'G', 'Ī':'i',
     'Ķ':'k', 'Ļ':'L', 'Ņ':'N', 'Š':'S', 'Ū':'u', 'Ž':'Z'
 }
- 
+
 var ALL_DOWNCODE_MAPS=new Array()
 ALL_DOWNCODE_MAPS[0]=LATIN_MAP
 ALL_DOWNCODE_MAPS[1]=LATIN_SYMBOLS_MAP
@@ -71,7 +71,7 @@ ALL_DOWNCODE_MAPS[5]=UKRAINIAN_MAP
 ALL_DOWNCODE_MAPS[6]=CZECH_MAP
 ALL_DOWNCODE_MAPS[7]=POLISH_MAP
 ALL_DOWNCODE_MAPS[8]=LATVIAN_MAP
- 
+
 var Downcoder = new Object();
 Downcoder.Initialize = function()
 {
@@ -90,7 +90,7 @@ Downcoder.Initialize = function()
      }
     Downcoder.regex = new RegExp('[' + Downcoder.chars + ']|[^' + Downcoder.chars + ']+','g') ;
 }
- 
+
 downcode= function( slug )
 {
     Downcoder.Initialize() ;
@@ -118,9 +118,10 @@ downcode= function( slug )
     }
     return downcoded;
 }
- 
- 
-module.exports = function(s, num_chars) {
+
+parameterize = function(s, num_chars, delimiter) {
+    delimiter = delimiter || '-'
+
     // changes, e.g., "Petty theft" to "petty_theft"
     // remove all these words from the string before urlifying
     s = downcode(s);
@@ -128,7 +129,15 @@ module.exports = function(s, num_chars) {
     // if downcode doesn't hit, the char will be stripped here
     s = s.replace(/[^-\w\s]/g, '');  // remove unneeded chars
     s = s.replace(/^\s+|\s+$/g, ''); // trim leading/trailing spaces
-    s = s.replace(/[-\s]+/g, '-');   // convert spaces to hyphens
+    s = s.replace(/[-\s]+/g, delimiter);   // convert spaces to hyphens
     s = s.toLowerCase();             // convert to lowercase
     return s.substring(0, num_chars);// trim to first num_chars chars
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = parameterize;
+} else if (typeof define === 'function' && define.amd) {
+    define('parameterize', [], function(require, exports, module) {
+        return parameterize;
+    });
 }

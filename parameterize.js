@@ -126,7 +126,7 @@ module.exports = function(s, num_chars) {
     s = downcode(s);
     //
     // if downcode doesn't hit, the char will be stripped here
-    s = s.replace(/[^-\w\s]/g, '');  // remove unneeded chars
+    s = s.replace(/[^-\w\s\u4E00-\u9FA5]/g, '');  // remove unneeded chars
     s = s.replace(/^\s+|\s+$/g, ''); // trim leading/trailing spaces
     s = s.replace(/[-\s]+/g, '-');   // convert spaces to hyphens
     s = s.toLowerCase();             // convert to lowercase

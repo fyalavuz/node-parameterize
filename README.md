@@ -8,10 +8,23 @@ Installing
 --------------------------------
 npm install parameterize
 
-
+ 
 Supports
 --------------------------------
-Turkish, Greek, Russian, Ukranian, Czech, Polish, Latvanian and Latin special chars.
+Turkish
+Azerbaijani
+Serbian
+Greek
+Georgian
+Russian
+Ukranian
+Czech
+Polish
+Romanian
+Latvanian
+Lithuanian 
+Arabic
+Latin special chars
 
 
 Require

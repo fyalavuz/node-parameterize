@@ -42,6 +42,19 @@ parameterize('parameterized url with special characters, öçıŞÇ');
 // parameterized-url-with-special-characters-ocisc
 ```
 
+```javascript
+// using optional length limit
+parameterize('this is a long text', 10);
+// outputs
+// this-is-a-l
+```
+
+```javascript
+// you can change delimiter character
+parameterize('this is a long text', 10, '_');
+// outputs
+// this_is_a_l
+```
 
 Using in express.js 3 view files as view helper
 --------------------------------

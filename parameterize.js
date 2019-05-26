@@ -105,6 +105,15 @@ var GEORGIAN_MAP = {
     'წ': 'w', 'ჭ': 'ch', 'ხ': 'x', 'ჯ': 'j', 'ჰ': 'h'
 };
 
+var SLOVAK_MAP = {
+    'á': 'a', 'ä': 'a', 'č': 'c', 'ď': 'd', 'é': 'e', 'í': 'i', 'ľ': 'l',
+    'ĺ': 'l', 'ň': 'n', 'ó': 'o', 'ô': 'o', 'ŕ': 'r', 'š': 's', 'ť': 't',
+    'ú': 'u', 'ý': 'y', 'ž': 'z',
+    'Á': 'a', 'Ä': 'A', 'Č': 'C', 'Ď': 'D', 'É': 'E', 'Í': 'I', 'Ľ': 'L',
+    'Ĺ': 'L', 'Ň': 'N', 'Ó': 'O', 'Ô': 'O', 'Ŕ': 'R', 'Š': 'S', 'Ť': 'T',
+    'Ú': 'U', 'Ý': 'Y', 'Ž': 'Z'
+};
+
 var ALL_DOWNCODE_MAPS = [
     LATIN_MAP,
     LATIN_SYMBOLS_MAP,
@@ -120,7 +129,8 @@ var ALL_DOWNCODE_MAPS = [
     LITHUANIAN_MAP,
     SERBIAN_MAP,
     AZERBAIJANI_MAP,
-    GEORGIAN_MAP
+    GEORGIAN_MAP,
+    SLOVAK_MAP
 ];
 
 

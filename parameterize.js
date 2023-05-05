@@ -180,7 +180,7 @@ var downcode = function(slug){
     return downcoded;
 }
 
-parameterize = function(s, num_chars, delimiter) {
+var parameterize = function(s, num_chars, delimiter) {
     delimiter = delimiter || '-'
 
     // changes, e.g., "Petty theft" to "petty_theft"
